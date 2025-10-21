@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+.calculator {
+    width: 300px;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-sizing: border-box; /* Agar padding tidak menambah lebar */
+}
+
+.buttons {
+    display: grid;
+    /* Grid 4 kolom */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+}
+
+.calculator button {
+    height: 60px;
+    border: none;
+    border-radius: 50px;
+    background-color: #555;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.calculator button:hover {
+    background-color: #666;
+}
+
+/* Tombol Operasi */
+.calculator .operator {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+.calculator .operator:hover {
+    background-color: #ffb74d;
+}
+
+/* Tombol Nol */
+.calculator .zero {
+    grid-column: span 2; /* Nol mengambil 2 kolom */
+    border-radius: 50px;
+}
+
+/* Tombol Sama Dengan */
+.calculator .equal {
+    background-color: #007aff; 
+}
+.calculator .equal:hover {
+    background-color: #3399ff; 
+}
